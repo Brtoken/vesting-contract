@@ -1,4 +1,4 @@
-# BEP20Token
+# BRToken TEST Vesting Contract
 
 ## Requrements
 - truffle v5.1.43 (Solidity v0.5.16 (solc-js), Node v14.8.0, Web3.js v1.2.1)

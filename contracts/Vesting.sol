@@ -12,8 +12,8 @@ contract Vesting is Context, Ownable {
     address public advisor;
     address public bRTK;
     
-    uint256 public SECONDS_IN_A_DAY = 28800;
-    // uint256 public SECONDS_IN_A_DAY = 1;
+    // uint256 public SECONDS_IN_A_DAY = 28800;
+    uint256 public SECONDS_IN_A_DAY = 1;
     
     uint256 constant public VESTING_RELEASE_START = 180;
     uint256 constant public VESTING_PERIOD_STEP = 90;
