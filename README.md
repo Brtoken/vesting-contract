@@ -9,7 +9,7 @@
 $ npm install 
 ```
 
-## Deploy BEP-20 token
+## Deploy Vesting contract token
 Create `.env` file from `.env.example` file.
 Set ```seed``` ```api key``` in `.env` file.
 
@@ -17,7 +17,6 @@ Set ```seed``` ```api key``` in `.env` file.
 ```
 $ truffle deploy --reset --network bsc_testnet
 
-After deployment write down 3 contract addresses(lp token, brToken, staking) to be used for dapp
 ```
 
 ## Test
