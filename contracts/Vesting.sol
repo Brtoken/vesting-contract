@@ -48,6 +48,8 @@ contract Vesting is Context, Ownable {
 
         uint256 amountUnlocked = unlockedAmount();
         uint256 amountToWithdraw = amountUnlocked.sub(releasedAmount);
+
+        require(amountToWithdraw > 0, 'Vesting: NO_WITHDRAW_AMOUNT');
         IBEP20(bRTK).transfer(msg.sender, amountToWithdraw);
         releasedAmount = releasedAmount.add(amountToWithdraw);
 

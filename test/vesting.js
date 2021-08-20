@@ -42,6 +42,12 @@ contract("Vesting Test", (accounts) => {
         await web3.eth.sendTransaction({from: owner, to: advisor, value: 1});
       }
 
+      try {
+        await vesting.withdraw({from: advisor});
+      } catch (e) {
+        assert.equal(e.reason, "Vesting: NO_WITHDRAW_AMOUNT");
+      }
+      
       assert.equal(Number(await vesting.unlockedAmount({from: advisor})), Number(toBN(0)));
 
       for (let i = 0; i < 80; i ++) {
